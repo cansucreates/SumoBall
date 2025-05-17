@@ -19,5 +19,10 @@ public class Enemy : MonoBehaviour
         // Normalize direction vector to ensure constant speed regardless of distance to player
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
         enemyRb.AddForce(lookDirection * speed);
+
+        if (transform.position.y < -10) // Check if the enemy falls below a certain height
+        {
+            Destroy(gameObject); // Destroy the enemy GameObject
+        }
     }
 }
