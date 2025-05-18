@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         Instantiate(powerupPrefab, GenerateSpawnPosition(), powerupPrefab.transform.rotation); // Spawn a powerup at the start
-     }
+    }
 
     // Update is called once per frame
     void Update()
